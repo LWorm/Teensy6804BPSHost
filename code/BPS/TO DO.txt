@@ -1,0 +1,27 @@
+
+**All library notes are contained in the "New Library Notes ..." text file in the lib folder.**
+
+
+Notes:
+        * Comment all Error dependencies out until it has been converted. After all hardware libraries have been converted.
+        * We will not be reusing "DC2100A" as it is heavily reliant on a custom RTOS which we will not be using.
+        * "main.cpp" will be written as a loop to replace "DC2100A.cpp" in its entirety. An RTOS may be implemented in its place at a later date.
+        * Debug and error reports will be sent over BOTH USB and CAN. Basic information will be sent over can as needed. Full detailed reports will be
+          sent over USB serial upon request.
+
+
+TASK #1:  The library "LTC6804-2" needs to be made compatible with the Teensy.
+              * Replace SPI library and correct any compatibilities within the library. (Example implementation contained in the LTC6804-2 reference
+               folder)
+              * Replace I2C library and correct any compatibilities within the library. (May not actually be necessary.)
+
+TASK #2  Begin writing "main.cpp" such that it reports verifiable data from the 6804 to a serial port.
+
+TASK #3  The library "LTC1380" needs to be made compatible with the Teensy.
+
+TASK #4  The library "Temperature" needs to be made compatible with the Teensy.
+
+Task #5  Add temperature reporting to "main.cpp" and print over serial.
+
+
+cross next bridge when we get there . . .
