@@ -1,0 +1,22 @@
+Luke Wormald note to etc.
+I have added multiple new libraries not all of which will be used.
+
+
+* (MAY NOT BE NECESSARY) The I2C code used currently actually implements SM Bus. This may be replaced either with the LT_I2C library or one of the many implementations
+  within the LT_SMBUS lib folder. Once the replacement has been determined the unused I2C and/or SMBUS files can be deleted. When a library is
+  is decided upon it may need to be made compatible with the Teensy per instructions here: http://www.linear.com/solutions/4537
+
+* LT_SPI will be implemented in the place of PCI12FXXJ_SPI and once this has been completed PCI12FXXJ_SPI can be removed. This may need to be
+  made compatible with the Teensy per instructions here: http://www.linear.com/solutions/4537 The Teensy SPI pins are the same as those on the
+  Arduino UNO (which is used in the instruction example).
+
+* All libraries with the prefix "LT_" require the Linduino library. Do not delete this. I believe that this needs no compatibility modifications,
+  however, someone with a greater knowledge of programming should look over it as well.
+
+* FlexCAN will be used for all CAN communications. This is to be implemented after everything else is converted.
+
+* I know of multiple timer libraries for Teensy. Will determine which one is best fit at a later date.
+
+* I don't really know if we need to replace PIC18FXXJ_ADC or if it can all be done in software.
+
+* EEPROM will need to be circumvented and deleted.
